@@ -1,0 +1,12 @@
+---
+version: "3.8"
+services:
+  docker-exporter:
+    container_name: selectel-balance-exporter
+    image: selectel-balance-exporter:latest
+    restart: always
+    build:
+      context: .
+      target: build
+    ports:
+      - 127.0.0.1:9333:8000
